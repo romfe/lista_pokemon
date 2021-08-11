@@ -2,7 +2,7 @@ import { FC } from 'react';
 import './ListaTipos.css';
 
 const ListaTipos: FC = () => {
-  const tipos = ['Normal', 'Water', 'Poison'];
+  const tipos: string[] = ['Normal', 'Water', 'Poison'];
   return (
     <div>
 
