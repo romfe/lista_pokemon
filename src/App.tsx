@@ -1,8 +1,8 @@
-import './App.css';
+import React, { FC } from 'react';
 import ListaPokemon from './components/Lista/ListaPokemon';
 import Filtro from './components/Filtro/Filtro';
 
-function App() {
+const App: FC = () => {
   return (
     <div>
       <ListaPokemon />

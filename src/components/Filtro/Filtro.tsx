@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import FiltroCP from './FiltroCP';
 import ListaTipos from './ListaTipos';
 import './Filtro.css';
 
-const Filtro = () => {
+const Filtro: FC = () => {
   return (
     <div>
       <FiltroCP />

@@ -1,7 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import './ListaPokemon.css';
 
-const ListaPokemon = () => {
+interface Props {
+
+}
+//props:Props
+const ListaPokemon: FC<Props> = () => {
   return (
     <div>
       <h1>Lista de Pokémons</h1>

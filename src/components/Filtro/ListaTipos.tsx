@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import './ListaTipos.css';
 
-const ListaTipos = () => {
+const ListaTipos: FC = () => {
   const tipos = ['Normal', 'Water', 'Poison'];
   return (
     <div>
