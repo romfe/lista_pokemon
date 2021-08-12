@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_POKEMONS } from '../../graphql/query-pokemons';
 import './ListaPokemon.css';
+import Pokemon from './Pokemon';
 
 interface Props {
 
@@ -15,7 +16,16 @@ const ListaPokemon: FC<Props> = () => {
     <div>
       <h1>Lista de Pokémons</h1>
       <p className="texto-total">Total visíveis: 69</p>
-      {pokemons && pokemons.map((pokemon: any) => JSON.stringify(pokemon))}
+      {pokemons && pokemons.map((pokemon: any) => <Pokemon
+        key={pokemon.id}
+        __typename={pokemon.__typename}
+        id={pokemon.id}
+        image={pokemon.image}
+        maxCP={pokemon.maxCP}
+        name={pokemon.name}
+        number={pokemon.number}
+        types={pokemon.types}
+      />)}
     </div>
   );
 };
