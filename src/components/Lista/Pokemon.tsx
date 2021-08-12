@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './Pokemon.css';
 
 interface Props {
   __typename: string,
@@ -13,9 +14,22 @@ interface Props {
 
 const Pokemon = (props: Props) => {
   return (
-    <div>
-      <p>{props.name}</p>
-      <p>{props.types}</p>
+    <div className="pokemon">
+      <div>
+        <img src={props.image} alt={props.name} className="imagem-pokemon" />
+      </div>
+      <div className="nome-pokemon">
+        {props.name}
+      </div>
+      <div className="numero-pokemon">
+        {props.number}
+      </div>
+      <div className="tipos-pokemon">
+        {props.types}
+      </div>
+      <div className="maxcp-pokemon">
+        <p className="maxcp-text">{props.maxCP}</p>
+      </div>
     </div>
   );
 }

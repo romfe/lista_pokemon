@@ -13,8 +13,8 @@ const ListaPokemon: FC<Props> = () => {
     variables: { first: 9 },
   });
   return (
-    <div>
-      <h1>Lista de Pokémons</h1>
+    <div className="lista-pokemon">
+      <h1 className="lista-titulo">Lista de Pokémons</h1>
       <p className="texto-total">Total visíveis: 69</p>
       {pokemons && pokemons.map((pokemon: any) => <Pokemon
         key={pokemon.id}
