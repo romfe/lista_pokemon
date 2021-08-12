@@ -17,7 +17,6 @@ const App: FC = () => {
     <div>
       <ApolloProvider client={client}>
 
-
         <ListaPokemon />
         <Filtro />
       </ApolloProvider>
