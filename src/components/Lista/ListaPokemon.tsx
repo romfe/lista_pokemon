@@ -15,7 +15,7 @@ const ListaPokemon: FC<Props> = () => {
     <div>
       <h1>Lista de Pokémons</h1>
       <p className="texto-total">Total visíveis: 69</p>
-      {pokemons && pokemons.map(pokemon: => JSON.stringify(pokemon))}
+      {pokemons && pokemons.map((pokemon: any) => JSON.stringify(pokemon))}
     </div>
   );
 };
