@@ -11,37 +11,38 @@ const useStyles = makeStyles({
   },
 });
 
-function valuetext(value: any) {
+function valuetext(value: number) {
   return `${value}°C`;
 }
 
 
-
-
-
-const FiltroCP: FC = () => {
+const FiltroCP = () => {
   const classes = useStyles();
-  const [value, setValue] = useState([20, 37]);
+  const [value, setValue] = useState([50, 4000]);
 
   const handleChange = (event: any, newValue: any) => {
     setValue(newValue);
   };
-  return (
-    <div>
-      <Typography id="range-slider" gutterBottom>
-        Temperature range
-      </Typography>
-      <div className={classes.root}>
-        <Slider
-          value={value}
-          onChange={handleChange}
-          valueLabelDisplay="auto"
-          aria-labelledby="range-slider"
-          getAriaValueText={valuetext}
-        />
+  return {
+    value,
+    renderSlider: (
+      <div>
+        <Typography id="range-slider" gutterBottom>
+          maxCP
+        </Typography>
+        <div className={classes.root}>
+          <Slider
+            value={value}
+            onChange={handleChange}
+            valueLabelDisplay="auto"
+            aria-labelledby="range-slider"
+            getAriaValueText={valuetext}
+            max={5000}
+          />
+        </div>
       </div>
-    </div>
-  );
+    )
+  };
 };
 
 export default FiltroCP;

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { useState } from 'react';
 import './ListaTipos.css';
 
 import {
@@ -7,7 +7,7 @@ import {
   ChakraProvider
 } from "@chakra-ui/react"
 
-const ListaTipos: FC = () => {
+const ListaTipos = () => {
   const tipos: string[] = [
     'Normal',
     'Water',
@@ -28,19 +28,70 @@ const ListaTipos: FC = () => {
     'Ghost',
     'Fairy'
   ];
-  return (
-    <div>
-      <ChakraProvider>
-        {tipos.map((tipo: string) => <Checkbox
-          size="md"
-          colorScheme="blue"
-          defaultIsChecked
-        >{tipo}</Checkbox>
-        )}
-      </ChakraProvider>
 
-    </div>
+  const [tiposSelecionados, setTiposSelecionados] = useState({
+    'Normal': true,
+    'Water': true,
+    'Poison': true,
+    'Psychic': true,
+    'Bug': true,
+    'Dark': true,
+    'Fire': true,
+    'Flying': true,
+    'Electric': true,
+    'Rock': true,
+    'Dragon': true,
+    'Steel': true,
+    'Fighting': true,
+    'Grass': true,
+    'Ground': true,
+    'Ice': true,
+    'Ghost': true,
+    'Fairy': true
+  }
   );
+  var listaAtualizada = {
+    'Normal': true,
+    'Water': true,
+    'Poison': true,
+    'Psychic': true,
+    'Bug': true,
+    'Dark': true,
+    'Fire': true,
+    'Flying': true,
+    'Electric': true,
+    'Rock': true,
+    'Dragon': true,
+    'Steel': true,
+    'Fighting': true,
+    'Grass': true,
+    'Ground': true,
+    'Ice': true,
+    'Ghost': true,
+    'Fairy': true
+  }
+  const [isSelected, setIsSelected] = useState(true);
+  return {
+    tiposSelecionados,
+    renderListaTipos: (
+
+      <div>
+        <ChakraProvider>
+          <CheckboxGroup>
+            {tipos.map((tipo: string) => <Checkbox
+              size="md"
+              colorScheme="blue"
+              defaultIsChecked
+              name={tipo}
+              isChecked={isSelected}
+            //onChange={ }
+            >{tipo}</Checkbox>
+            )}
+          </CheckboxGroup>
+        </ChakraProvider>
+
+      </div >)
+  };
 };
 
 export default ListaTipos;
