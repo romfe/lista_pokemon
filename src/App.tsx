@@ -14,11 +14,11 @@ export const client = new ApolloClient({
   link,
 });
 const App: FC = () => {
-  const { value, renderFiltro } = Filtro();
+  const { value, tiposSelecionados, renderFiltro } = Filtro();
   return (
     <div className="app-style">
       <ApolloProvider client={client}>
-        <ListaPokemon intervaloCP={value} />
+        <ListaPokemon intervaloCP={value} listaTipos={tiposSelecionados} />
         {renderFiltro}
 
       </ApolloProvider>

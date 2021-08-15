@@ -26,51 +26,24 @@ const ListaTipos = () => {
     'Ground',
     'Ice',
     'Ghost',
-    'Fairy'
+    'Fairy',
   ];
+  const [tiposSelecionados, setTiposSelecionados] = useState(tipos);
 
-  const [tiposSelecionados, setTiposSelecionados] = useState({
-    'Normal': true,
-    'Water': true,
-    'Poison': true,
-    'Psychic': true,
-    'Bug': true,
-    'Dark': true,
-    'Fire': true,
-    'Flying': true,
-    'Electric': true,
-    'Rock': true,
-    'Dragon': true,
-    'Steel': true,
-    'Fighting': true,
-    'Grass': true,
-    'Ground': true,
-    'Ice': true,
-    'Ghost': true,
-    'Fairy': true
+  type evento = {
+    changeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void
   }
-  );
-  var listaAtualizada = {
-    'Normal': true,
-    'Water': true,
-    'Poison': true,
-    'Psychic': true,
-    'Bug': true,
-    'Dark': true,
-    'Fire': true,
-    'Flying': true,
-    'Electric': true,
-    'Rock': true,
-    'Dragon': true,
-    'Steel': true,
-    'Fighting': true,
-    'Grass': true,
-    'Ground': true,
-    'Ice': true,
-    'Ghost': true,
-    'Fairy': true
+
+  const changeHandler = (e: React.FormEvent<HTMLInputElement>) => {
+    if (tiposSelecionados.includes(e.currentTarget.name)) {
+      setTiposSelecionados(tiposSelecionados.filter(valor => valor !== e.currentTarget.name));
+    } else {
+      var auxiliar: string[] = tiposSelecionados;
+      auxiliar.push(e.currentTarget.name);
+      setTiposSelecionados(auxiliar);
+    }
   }
-  const [isSelected, setIsSelected] = useState(true);
+
   return {
     tiposSelecionados,
     renderListaTipos: (
@@ -83,8 +56,7 @@ const ListaTipos = () => {
               colorScheme="blue"
               defaultIsChecked
               name={tipo}
-              isChecked={isSelected}
-            //onChange={ }
+              onChange={changeHandler}
             >{tipo}</Checkbox>
             )}
           </CheckboxGroup>

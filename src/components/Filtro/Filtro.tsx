@@ -6,7 +6,7 @@ const Filtro = () => {
   const { value, renderSlider } = FiltroCP();
   const { tiposSelecionados, renderListaTipos } = ListaTipos();
   return {
-    value, renderFiltro: (
+    value, tiposSelecionados, renderFiltro: (
       <div>
         {renderSlider}
         {value[0]}

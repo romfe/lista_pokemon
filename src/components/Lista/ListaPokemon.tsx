@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_POKEMONS } from '../../graphql/query-pokemons';
 import './ListaPokemon.css';
 import Pokemon from './Pokemon';
 
-
-
 interface Props {
   intervaloCP: number[];
+  listaTipos: string[];
 }
 
 const ListaPokemon = (props: Props) => {
-  const [listaTipos, setListaTipos] = useState(['Grass', 'Fire', 'Water']);
   const { data: { pokemons = [] } = {} } = useQuery(QUERY_POKEMONS, {
     variables: { first: 151 },
   });
@@ -20,9 +17,9 @@ const ListaPokemon = (props: Props) => {
     <div className="lista-pokemon">
       <h1 className="lista-titulo">Lista de Pokémons</h1>
       <p className="texto-total">Total visíveis: 69</p>
-      {pokemons && pokemons.filter((pokemon: any) =>
+      {pokemons?.filter((pokemon: any) =>
       (pokemon.maxCP >= props.intervaloCP[0] && pokemon.maxCP <= props.intervaloCP[1] &&
-        (listaTipos.includes(pokemon.types[0] || pokemon.types[1] || pokemon.types[2])))).map((pokemon: any) =>
+        (props.listaTipos.includes(pokemon.types[0] || pokemon.types[1] || pokemon.types[2])))).map((pokemon: any) =>
           <Pokemon
             key={pokemon.id}
             __typename={pokemon.__typename}
