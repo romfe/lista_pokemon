@@ -1,5 +1,5 @@
 import './Pokemon.css';
-//import {useState} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 interface Props {
   __typename: string,
   id: string,
@@ -25,21 +25,29 @@ const Pokemon = (props: Props) => {
 
   return (
     <div className="pokemon">
-      <div>
-        <img src={props.image} alt={props.name} className="imagem-pokemon" />
-      </div>
-      <div className="nome-pokemon">
-        {props.name}
-      </div>
-      <div className="numero-pokemon">
-        {props.number}
-      </div>
-      <div className="tipos-pokemon">
-        {props.types}
-      </div>
-      <div className={classe}>
-        <p className="maxcp-text">{props.maxCP}</p>
-      </div>
+      <Container>
+        <Row>
+          <Col sm={5}>
+            <img src={props.image} alt={props.name} className="imagem-pokemon" />
+          </Col>
+          <Col sm={6}>
+            <div className="nome-pokemon">
+              {props.name}
+            </div>
+            <div className="tipos-pokemon">
+              {props.types}
+            </div>
+            <div className={classe}>
+              <p className="maxcp-text">{props.maxCP}</p>
+            </div>
+          </Col>
+          <Col sm={1}>
+            <div className="numero-pokemon">
+              {props.number}
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

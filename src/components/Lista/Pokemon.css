@@ -54,24 +54,26 @@
   opacity: 1;
 }
 
-.maxcp-pokemon{
+.maxcp{
   top: 240px;
   left: 410px;
   width: 54px;
-  height: 19px;
-  background: #662C91 0% 0% no-repeat padding-box;
+  height: 19px;  
   border-radius: 4px;
   opacity: 1;
+  color:white;
+  text-align:center;
+}
+.roxo {
+  background: #662C91;
+}
+.amarelo {
+  background:  #F5B700;
+}
+.vermelho {
+  background:  #F87060;
+}
+.azul {
+  background: #00C1FD;
 }
 
-.maxcp-pokemon p{
-  top: 240px;
-  left: 425px;
-  width: 24px;
-  height: 19px;
-  text-align: left;
-  font: normal normal bold 14px/19px Roboto;
-  letter-spacing: 0px;
-  color: #FFFFFF;
-  opacity: 1;
-}
