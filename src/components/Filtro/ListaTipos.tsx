@@ -38,16 +38,13 @@ const ListaTipos = () => {
     if (tiposSelecionados.includes(e.currentTarget.name)) {
       setTiposSelecionados(tiposSelecionados.filter(valor => valor !== e.currentTarget.name));
     } else {
-      var auxiliar: string[] = tiposSelecionados;
-      auxiliar.push(e.currentTarget.name);
-      setTiposSelecionados(auxiliar);
+      setTiposSelecionados([...tiposSelecionados, e.currentTarget.name]);
     }
   }
 
   return {
     tiposSelecionados,
     renderListaTipos: (
-
       <div>
         <ChakraProvider>
           <CheckboxGroup>

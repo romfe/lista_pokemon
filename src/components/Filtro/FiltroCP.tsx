@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import './FiltroCP.css';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -10,10 +10,6 @@ const useStyles = makeStyles({
     width: 300,
   },
 });
-
-function valuetext(value: number) {
-  return `${value}°C`;
-}
 
 
 const FiltroCP = () => {
@@ -36,7 +32,6 @@ const FiltroCP = () => {
             onChange={handleChange}
             valueLabelDisplay="auto"
             aria-labelledby="range-slider"
-            getAriaValueText={valuetext}
             max={5000}
           />
         </div>

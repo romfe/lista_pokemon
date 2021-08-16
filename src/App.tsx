@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import ListaPokemon from './components/Lista/ListaPokemon';
 import Filtro from './components/Filtro/Filtro';
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -13,6 +13,7 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
   link,
 });
+
 const App: FC = () => {
   const { value, tiposSelecionados, renderFiltro } = Filtro();
   return (

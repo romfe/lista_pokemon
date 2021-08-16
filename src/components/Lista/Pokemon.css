@@ -1,4 +1,5 @@
 .pokemon{
+  display:flex;
   top: 188px;
   left: 323px;
   width: 240px;
