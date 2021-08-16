@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 const FiltroCP = () => {
   const classes = useStyles();
-  const [value, setValue] = useState([50, 4000]);
+  const [value, setValue] = useState([50, 3905]);
 
   const handleChange = (event: any, newValue: any) => {
     setValue(newValue);
@@ -24,7 +24,7 @@ const FiltroCP = () => {
     renderSlider: (
       <div>
         <Typography id="range-slider" gutterBottom>
-          maxCP
+          <p className="maxCP-label">maxCP</p>
         </Typography>
         <div className={classes.root}>
           <Slider
@@ -32,7 +32,7 @@ const FiltroCP = () => {
             onChange={handleChange}
             valueLabelDisplay="off"
             aria-labelledby="range-slider"
-            max={5000}
+            max={4000}
           />
         </div>
       </div>

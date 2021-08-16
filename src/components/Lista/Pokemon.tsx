@@ -27,10 +27,10 @@ const Pokemon = (props: Props) => {
     <div className="pokemon">
       <Container>
         <Row>
-          <Col sm={4}>
+          <Col sm={4} xs={4}>
             <img src={props.image} alt={props.name} className="imagem-pokemon" />
           </Col>
-          <Col sm={6}>
+          <Col sm={6} xs={6}>
             <div className="nome-pokemon">
               {props.name}
             </div>
@@ -41,7 +41,7 @@ const Pokemon = (props: Props) => {
               <p className="maxcp-text">{props.maxCP}</p>
             </div>
           </Col>
-          <Col sm={2}>
+          <Col sm={2} xs={2}>
             <div className="numero-pokemon">
               {props.number}
             </div>

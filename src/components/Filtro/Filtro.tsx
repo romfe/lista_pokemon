@@ -8,7 +8,6 @@ const Filtro = () => {
   const { tiposSelecionados, renderListaTipos } = ListaTipos();
   return {
     value, tiposSelecionados, renderFiltro: (
-
       <div className="card-filtro">
         <Container>
           <Row>
@@ -28,6 +27,9 @@ const Filtro = () => {
                 {value[1]}
               </div>
             </Col>
+          </Row>
+          <Row>
+            <p className="types-label">Types</p>
           </Row>
           <Row>
             {renderListaTipos}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ListaTipos.css';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import {
   Checkbox,
@@ -49,6 +50,8 @@ const ListaTipos = () => {
         <ChakraProvider>
           <CheckboxGroup>
             <div className="grupo-tipos">
+
+
               {tipos.map((tipo: string) => <Checkbox
                 size="md"
                 colorScheme="blue"
@@ -57,10 +60,10 @@ const ListaTipos = () => {
                 onChange={changeHandler}
               >{tipo}</Checkbox>
               )}
+
             </div>
           </CheckboxGroup>
         </ChakraProvider>
-
       </div >)
   };
 };

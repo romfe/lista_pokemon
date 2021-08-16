@@ -9,6 +9,7 @@
 }
 
 .lista-titulo{
+  margin:5px;
   text-align: left;
   font: normal normal bold 35px/46px Roboto;
   letter-spacing: 0px;
@@ -24,4 +25,30 @@
   flex-flow: row wrap;
   max-width: 596px;
   max-height: 555px;
+}
+
+.lista-pokemon-view::-webkit-scrollbar{
+
+  width: 12px;
+  height: 543px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 9px;
+  opacity: 1;
+  
+}
+
+.lista-pokemon-view::-webkit-scrollbar-thumb{
+  width: 12px;
+  height: 54px;
+  background: #DBDBDB 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.texto-total{
+  text-align: left;
+  font: normal normal bold 14px/19px Roboto;
+  letter-spacing: 0px;
+  color: #00A7FD;
+  opacity: 1;
 }
