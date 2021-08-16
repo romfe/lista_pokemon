@@ -48,14 +48,16 @@ const ListaTipos = () => {
       <div>
         <ChakraProvider>
           <CheckboxGroup>
-            {tipos.map((tipo: string) => <Checkbox
-              size="md"
-              colorScheme="blue"
-              defaultIsChecked
-              name={tipo}
-              onChange={changeHandler}
-            >{tipo}</Checkbox>
-            )}
+            <div className="grupo-tipos">
+              {tipos.map((tipo: string) => <Checkbox
+                size="md"
+                colorScheme="blue"
+                defaultIsChecked
+                name={tipo}
+                onChange={changeHandler}
+              >{tipo}</Checkbox>
+              )}
+            </div>
           </CheckboxGroup>
         </ChakraProvider>
 

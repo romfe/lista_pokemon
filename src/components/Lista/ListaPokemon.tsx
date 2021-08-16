@@ -28,20 +28,22 @@ const ListaPokemon = (props: Props) => {
           <p className="texto-total">Total visíveis: {numeroVisiveis}</p>
         </Row>
       </Container>
-      {pokemons?.filter((pokemon: any) =>
-      (pokemon.maxCP >= props.intervaloCP[0] && pokemon.maxCP <= props.intervaloCP[1] &&
-        (props.listaTipos.includes(pokemon.types[0]) || props.listaTipos.includes(pokemon.types[1])))).map((pokemon: any) =>
-          <Pokemon
-            key={pokemon.id}
-            __typename={pokemon.__typename}
-            id={pokemon.id}
-            image={pokemon.image}
-            maxCP={pokemon.maxCP}
-            name={pokemon.name}
-            number={pokemon.number}
-            types={pokemon.types}
-          />
-        )}
+      <Container className="lista-pokemon-view">
+        {pokemons?.filter((pokemon: any) =>
+        (pokemon.maxCP >= props.intervaloCP[0] && pokemon.maxCP <= props.intervaloCP[1] &&
+          (props.listaTipos.includes(pokemon.types[0]) || props.listaTipos.includes(pokemon.types[1])))).map((pokemon: any) =>
+            <Pokemon
+              key={pokemon.id}
+              __typename={pokemon.__typename}
+              id={pokemon.id}
+              image={pokemon.image}
+              maxCP={pokemon.maxCP}
+              name={pokemon.name}
+              number={pokemon.number}
+              types={pokemon.types}
+            />
+          )}
+      </Container>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const FiltroCP = () => {
           <Slider
             value={value}
             onChange={handleChange}
-            valueLabelDisplay="auto"
+            valueLabelDisplay="off"
             aria-labelledby="range-slider"
             max={5000}
           />
