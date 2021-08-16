@@ -27,7 +27,7 @@ const Pokemon = (props: Props) => {
     <div className="pokemon">
       <Container>
         <Row>
-          <Col sm={5}>
+          <Col sm={4}>
             <img src={props.image} alt={props.name} className="imagem-pokemon" />
           </Col>
           <Col sm={6}>
@@ -35,13 +35,13 @@ const Pokemon = (props: Props) => {
               {props.name}
             </div>
             <div className="tipos-pokemon">
-              {props.types}
+              {props.types.join(", ")}
             </div>
             <div className={classe}>
               <p className="maxcp-text">{props.maxCP}</p>
             </div>
           </Col>
-          <Col sm={1}>
+          <Col sm={2}>
             <div className="numero-pokemon">
               {props.number}
             </div>

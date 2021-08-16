@@ -4,7 +4,6 @@ import { QUERY_POKEMONS } from '../../graphql/query-pokemons';
 import './ListaPokemon.css';
 import Pokemon from './Pokemon';
 import { Container, Row, Col } from 'react-bootstrap';
-import React from 'react';
 
 
 interface Props {

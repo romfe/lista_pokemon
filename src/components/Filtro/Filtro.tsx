@@ -7,7 +7,8 @@ const Filtro = () => {
   const { tiposSelecionados, renderListaTipos } = ListaTipos();
   return {
     value, tiposSelecionados, renderFiltro: (
-      <div>
+      <div className="card-filtro">
+        <h1 className="titulo-filtro">Filtro</h1>
         {renderSlider}
         {value[0]}
         {renderListaTipos}
