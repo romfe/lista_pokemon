@@ -1,9 +1,8 @@
 .app-style{
   display:flex;
+
   top: 0px;
   left: 0px;
-  width: 1366px;
-  height: 768px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 1;
 }

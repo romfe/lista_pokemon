@@ -1,17 +1,18 @@
 .lista-pokemon{
-  top: 50px;
-  left: 283px;
-  width: 596px;
-  height: 718px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  overflow: scroll;
+  max-width: 596px;
+  max-height: 718px;
   background: #F4F4F4 0% 0% no-repeat padding-box;
   border-radius: 50px 50px 0px 0px;
   opacity: 1;
+
 }
+
 .lista-titulo{
-  top: 90px;
-  left: 323px;
-  width: 297px;
-  height: 46px;
   text-align: left;
   font: normal normal bold 35px/46px Roboto;
   letter-spacing: 0px;
