@@ -28,7 +28,7 @@ O aplicativo foi desenvolvido fazendo uso de:
 -Material-ui para o slider (https://next.material-ui.com/components/slider/)  
 `npm install @material-ui/core`  
 
--Bootstrap para estilização e responsividade (https://react-bootstrap.github.io/)
+-Bootstrap para estilização e responsividade (https://react-bootstrap.github.io/)  
 `npm install react-bootstrap@next bootstrap@5.0.2`  
 
 
