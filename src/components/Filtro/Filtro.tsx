@@ -18,12 +18,12 @@ const Filtro = () => {
           </Row>
           <Row>
             <Col sm={6}>
-              <div className="maxCP">
+              <div className="maxCP-min">
                 {value[0]}
               </div>
             </Col>
             <Col sm={6}>
-              <div className="maxCP">
+              <div className="maxCP-max">
                 {value[1]}
               </div>
             </Col>

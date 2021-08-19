@@ -33,6 +33,7 @@ const FiltroCP = () => {
             valueLabelDisplay="off"
             aria-labelledby="range-slider"
             max={4000}
+            className="slider"
           />
         </div>
       </div>

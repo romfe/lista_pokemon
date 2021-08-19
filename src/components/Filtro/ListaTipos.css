@@ -6,3 +6,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.checkbox-tipo{
+  margin:5px auto;
+}

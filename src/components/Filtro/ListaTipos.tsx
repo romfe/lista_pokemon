@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './ListaTipos.css';
-import { Container, Row, Col } from 'react-bootstrap';
 
 import {
   Checkbox,
@@ -58,6 +57,7 @@ const ListaTipos = () => {
                 defaultIsChecked
                 name={tipo}
                 onChange={changeHandler}
+                className="checkbox-tipo"
               >{tipo}</Checkbox>
               )}
 
