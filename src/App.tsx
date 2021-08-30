@@ -26,7 +26,7 @@ const App: FC = () => {
             <Col xs={12} md={8}>
               <ListaPokemon intervaloCP={value} listaTipos={tiposSelecionados} />
             </Col>
-            <Col xs={6} md={4}>
+            <Col xs={6} md={4} className="filtro-card">
               {renderFiltro}
             </Col>
           </Row>

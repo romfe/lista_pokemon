@@ -13,12 +13,14 @@ const useStyles = makeStyles({
 
 
 const FiltroCP = () => {
+
   const classes = useStyles();
   const [value, setValue] = useState([50, 3905]);
-
   const handleChange = (event: any, newValue: any) => {
+    //tentar string ou string[] para newValue
     setValue(newValue);
   };
+
   return {
     value,
     renderSlider: (

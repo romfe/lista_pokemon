@@ -10,6 +10,14 @@ interface Props {
   listaTipos: string[];
 }
 
+interface Pokemon {
+  id: string,
+  number: string,
+  name: string,
+  types: string[],
+  image: string,
+  maxCP: number,
+}
 const ListaPokemon = (props: Props) => {
   const { data: { pokemons = [] } = {} } = useQuery(QUERY_POKEMONS, {
     variables: { first: 151 },
@@ -30,7 +38,7 @@ const ListaPokemon = (props: Props) => {
         </Row>
       </Container>
       <Container className="lista-pokemon-view">
-        {pokemons?.filter((pokemon: any) =>
+        {pokemons?.filter((pokemon: Pokemon) =>
         (pokemon.maxCP >= props.intervaloCP[0] && pokemon.maxCP <= props.intervaloCP[1] &&
           (props.listaTipos.includes(pokemon.types[0]) || props.listaTipos.includes(pokemon.types[1])))).map((pokemon: any) =>
             <Pokemon

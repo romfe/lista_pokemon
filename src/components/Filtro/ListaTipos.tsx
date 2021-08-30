@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './ListaTipos.css';
 
+//importando bibliotecas importantes para as checkboxes
 import {
   Checkbox,
   CheckboxGroup,
@@ -50,15 +51,15 @@ const ListaTipos = () => {
           <CheckboxGroup>
             <div className="grupo-tipos">
 
-
-              {tipos.map((tipo: string) => <Checkbox
-                size="md"
-                colorScheme="blue"
-                defaultIsChecked
-                name={tipo}
-                onChange={changeHandler}
-                className="checkbox-tipo"
-              >{tipo}</Checkbox>
+              {tipos.map((tipo: string) => //uma checkbox para cada tipo de Pokémon
+                <Checkbox
+                  size="md"
+                  colorScheme="blue"
+                  defaultIsChecked
+                  name={tipo}
+                  onChange={changeHandler} //evento que controla quais checkboxes estão selecionadas
+                  className="checkbox-tipo"
+                >{tipo}</Checkbox>
               )}
 
             </div>
