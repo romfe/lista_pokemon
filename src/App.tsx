@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import ListaPokemon from './components/Lista/ListaPokemon';
 import Filtro from './components/Filtro/Filtro';
-import { ApolloProvider } from "@apollo/react-hooks";
+import { GlobalStyle, MainCard } from './styles/global';
+import { ApolloProvider } from "@apollo/react-hooks";//se der pau, trocar o apolloprovider pro import de baixo
 import { createHttpLink, InMemoryCache, ApolloClient } from "@apollo/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -19,7 +20,7 @@ export const client = new ApolloClient({
 const App: FC = () => {
   const { value, tiposSelecionados, renderFiltro } = Filtro();
   return (
-    <div className="app-style">
+    <MainCard>
       <ApolloProvider client={client}>
         <Container fluid={true}>
           <Row>
@@ -32,7 +33,8 @@ const App: FC = () => {
           </Row>
         </Container>
       </ApolloProvider>
-    </div>
+      <GlobalStyle />
+    </ MainCard>
   );
 }
 
