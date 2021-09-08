@@ -1,13 +1,14 @@
-import FiltroCP from './FiltroCP';
-import ListaTipos from './ListaTipos';
+import FiltroCP from '../FiltroCP/FiltroCP';
+import ListaTipos from '../ListaTipos/ListaTipos';
 import { Container, Row, Col } from 'react-bootstrap';
-import './Filtro.css';
+import { MainCard } from './styles';
 
 const Filtro = () => {
   const { value, renderSlider } = FiltroCP();
   const { tiposSelecionados, renderListaTipos } = ListaTipos();
   return {
     value, tiposSelecionados, renderFiltro: (
+      <MainCard>
       <div className="card-filtro">
         <Container>
           <Row>
@@ -36,6 +37,7 @@ const Filtro = () => {
           </Row>
         </Container>
       </div>
+      </MainCard>
     )
   };
 };

@@ -6,7 +6,6 @@ import { ApolloProvider } from "@apollo/react-hooks";//se der pau, trocar o apol
 import { createHttpLink, InMemoryCache, ApolloClient } from "@apollo/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import './App.css';
 
 export const link = createHttpLink({
   uri: "https://graphql-pokemon2.vercel.app/"
@@ -20,6 +19,7 @@ export const client = new ApolloClient({
 const App: FC = () => {
   const { value, tiposSelecionados, renderFiltro } = Filtro();
   return (
+    <>
     <MainCard>
       <ApolloProvider client={client}>
         <Container fluid={true}>
@@ -33,8 +33,9 @@ const App: FC = () => {
           </Row>
         </Container>
       </ApolloProvider>
-      <GlobalStyle />
     </ MainCard>
+    <GlobalStyle />
+    </>
   );
 }
 

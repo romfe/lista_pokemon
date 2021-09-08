@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ListaTipos.css';
+import {MainCard} from './styles';
 
 //importando bibliotecas importantes para as checkboxes
 import {
@@ -46,7 +46,7 @@ const ListaTipos = () => {
   return {
     tiposSelecionados,
     renderListaTipos: (
-      <div>
+      <MainCard>
         <ChakraProvider>
           <CheckboxGroup>
             <div className="grupo-tipos">
@@ -65,7 +65,7 @@ const ListaTipos = () => {
             </div>
           </CheckboxGroup>
         </ChakraProvider>
-      </div >)
+        </MainCard>)
   };
 };
 

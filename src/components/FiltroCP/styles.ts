@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const MainCard = styled.div`
 .maxCP-label{
   margin-left:15px;
   text-align: left;
@@ -8,3 +11,4 @@
 .slider{
   margin-left:15px;
 }
+`;

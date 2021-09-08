@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './FiltroCP.css';
+
+import {MainCard} from './styles';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -24,7 +25,8 @@ const FiltroCP = () => {
   return {
     value,
     renderSlider: (
-      <div>
+
+      <MainCard>
         <Typography id="range-slider" gutterBottom>
           <p className="maxCP-label">maxCP</p>
         </Typography>
@@ -38,7 +40,7 @@ const FiltroCP = () => {
             className="slider"
           />
         </div>
-      </div>
+      </MainCard>
     )
   };
 };

@@ -1,5 +1,5 @@
-import './Pokemon.css';
 import { Container, Row, Col } from 'react-bootstrap';
+import {MainCard} from './styles';
 interface Props {
   __typename: string,
   id: string,
@@ -24,6 +24,7 @@ const Pokemon = (props: Props) => {
   }
 
   return (
+    <MainCard>
     <div className="pokemon">
       <Container>
         <Row>
@@ -49,6 +50,7 @@ const Pokemon = (props: Props) => {
         </Row>
       </Container>
     </div>
+    </MainCard>
   );
 }
 

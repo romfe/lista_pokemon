@@ -1,3 +1,7 @@
+import styled from "styled-components";
+
+export const MainCard = styled.div`
+
 .pokemon{
   display:flex;
   justify-content: space-between;
@@ -76,3 +80,4 @@
   background: #00C1FD;
 }
 
+`;

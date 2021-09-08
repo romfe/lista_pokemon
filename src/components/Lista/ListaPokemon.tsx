@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_POKEMONS } from '../../graphql/query-pokemons';
-import './ListaPokemon.css';
-import Pokemon from './Pokemon';
+import { MainCard } from './styles';
+import Pokemon from '../Pokemon/Pokemon';
 import { Container, Row } from 'react-bootstrap';
 
 
@@ -24,6 +24,7 @@ const ListaPokemon = (props: Props) => {
   });
 
   return (
+    <MainCard>
     <div className="lista-pokemon">
       <Container fluid="md">
         <Row>
@@ -54,6 +55,7 @@ const ListaPokemon = (props: Props) => {
           )}
       </Container>
     </div>
+    </MainCard>
   );
 };
 

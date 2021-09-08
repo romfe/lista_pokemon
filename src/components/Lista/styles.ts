@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+export const MainCard = styled.div`
 .lista-pokemon{
   display:flex;
   flex-flow: row wrap;
@@ -36,7 +39,6 @@
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 9px;
   opacity: 1;
-  
 }
 
 .lista-pokemon-view::-webkit-scrollbar-thumb{
@@ -55,3 +57,4 @@
   color: #00A7FD;
   opacity: 1;
 }
+`;
