@@ -5,6 +5,10 @@
 O presente aplicativo faz uma consulta em uma API pública utilizando graphQL e exibe informações a respeito de Pokémons.  
 As informações podem ser filtradas por Tipos de Pokémon e também pelo máximo de CP.
 
+### O aplicativo pode ser acessado no link:  
+
+https://romfe.github.io/lista_pokemon_live/
+
 ## Bibliotecas e versões de software utilizados no desenvolvimento
 
 O aplicativo foi desenvolvido fazendo uso de:
