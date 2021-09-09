@@ -7,5 +7,6 @@ import styled from "styled-components";
   }
   .checkbox-tipo{
     margin:5px auto;
+    width:100%;
   }
 `;
