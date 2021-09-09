@@ -18,16 +18,14 @@ const Filtro = () => {
             {renderSlider}
           </Row>
           <Row>
-            <Col sm={6}>
+            <div className="div-intervalo">
               <div className="maxCP-min">
                 {value[0]}
               </div>
-            </Col>
-            <Col sm={6}>
               <div className="maxCP-max">
                 {value[1]}
               </div>
-            </Col>
+              </div>
           </Row>
           <Row>
             <p className="types-label">Types</p>

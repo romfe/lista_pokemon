@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
 export const MainCard = styled.div`
+margin-top:100px;
+
+.div-intervalo{
+  display:flex;
+  justify-content:space-between;
+  @media(max-width:720px){
+    justify-content:space-around;
+  }
+}
+
 .titulo-filtro{
   margin:5px;
   padding-top: 30px;
@@ -25,7 +35,7 @@ export const MainCard = styled.div`
 
 .maxCP-min{
   font-weight:700;
-  margin-left:5px;
+  //margin-left:5px;
   display:flex;
   text-align:center;
   justify-content: center;
@@ -39,7 +49,7 @@ export const MainCard = styled.div`
 
 .maxCP-max{
   font-weight:700;
-  margin-left: 55px;
+  //margin-left: 100px;
   display:flex;
   text-align:center;
   justify-content: center;
