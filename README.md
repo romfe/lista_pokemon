@@ -1,49 +1,51 @@
-# Lista de Pokémon  
+# Lista de Pokémon
 
-## Introdução  
+## Introdução
 
 O presente aplicativo faz uma consulta em uma API pública utilizando graphQL e exibe informações a respeito de Pokémons.  
-As informações podem ser filtradas por Tipos de Pokémon e também pelo máximo de CP.  
+As informações podem ser filtradas por Tipos de Pokémon e também pelo máximo de CP.
 
 ## Bibliotecas e versões de software utilizados no desenvolvimento
 
-O aplicativo foi desenvolvido fazendo uso de:  
+O aplicativo foi desenvolvido fazendo uso de:
 
 -Ubuntu 18.04  
 -React 17.0.2  
 -Typescript 4.3.5  
--Google Chrome 92.0.4515.131  
+-Google Chrome 92.0.4515.131
 
--As seguintes bibliotecas foram utilizadas:  
+-As seguintes bibliotecas foram utilizadas:
 
 -Apollo (https://www.apollographql.com/docs/react/)  
-`npm add @apollo/react-hooks apollo-boost`  
+`npm add @apollo/react-hooks apollo-boost`
 
 -GraphQL (https://graphql.org/)  
-`npm add graphql graphql-tag`  
+`npm add graphql graphql-tag`
 
 -Chakra-ui na elaboração das Checkboxes (https://chakra-ui.com/docs/form/checkbox)  
-`npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`  
+`npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`
 
 -Material-ui para o slider (https://next.material-ui.com/components/slider/)  
-`npm install @material-ui/core`  
+`npm install @material-ui/core`
 
 -Bootstrap para estilização e responsividade (https://react-bootstrap.github.io/)  
-`npm install react-bootstrap@next bootstrap@5.0.2`  
+`npm install react-bootstrap@next bootstrap@5.0.2`
 
+-Styled components para encadeamento de CSS e estilização (https://styled-components.com/)  
+`npm install styled-components @types/styled-components `
 
 ## Instalação
 
-Para instalar o Web app, basta executar em seu prompt de comando:  
+Para instalar o Web app, basta executar em seu prompt de comando:
 
 `git clone git@github.com:romfe/lista_pokemon.git`  
 `cd lista_pokemon`  
-`npm install`  
+`npm install`
 
 Para rodar o App localmente, basta executar o seguinte comando, como administrador:  
-`npm start`  
+`npm start`
 
-Em seguida, acessar "localhost:3000" no seu navegador.  
+Em seguida, acessar "localhost:3000" no seu navegador.
 
 ## Operação
 

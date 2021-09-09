@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     @media(max-width:1080px){ // quando o usuário estiver com uma tela de até 1080 px de largura
       font-size:93.75%;
     }
-    @media(max-width:720px){ 
+    @media(max-width:720px){
       font-size:87.5%;
     }
   }
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const MainCard = styled.div`
+export const MainCard = styled.main`
   display:flex;
   justify-content: space-around;
   top: 0px;
